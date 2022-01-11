@@ -5,7 +5,7 @@ import shortid from 'shortid';
 
 
 const Container = styled.div`
-    background-color: lightgreen;
+    background-color: #CCDBDC;
     height: 99vh;
     width: 99vw;
     display: flex;
@@ -15,6 +15,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
+    color: #007EA7;
     margin-top: 10px;
     margin-bottom: 60px;
     font-size: 44px;
@@ -23,7 +24,7 @@ const Title = styled.h1`
 
 const FormContainer = styled.div`
     width: 50vw;
-    border: 1px solid black;
+    border: 1px solid #003249;
     background-color: white;
 `;
 
@@ -34,6 +35,7 @@ const Form = styled.form`
 `;
 
 const FormTitle = styled.h2`
+    color: #003249;
     margin: 16px 0px;
 `;
 
@@ -64,7 +66,9 @@ const Button = styled.button`
     border: none;
     padding: 10px 20px;
     margin: 16px 0px;
-
+    :hover {
+        background-color: #51B87E;
+    }
 `;
 
 class UserForm extends React.Component {
