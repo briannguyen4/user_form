@@ -12,6 +12,7 @@ This is a web application for a user registration form created with the followin
 
 
 ## Code Snippets
+
 This user registration form provides 5 inputs for the user. Two of them, occupation and state, should be selected from a JSON body provided from an external API. The following lifecycle method will deal with receiving that information. After the Form component successfully mounts,an axios GET method is sent to a url to receive the JSON response, and then it is stored into local state.
 
 ```
@@ -31,7 +32,7 @@ componentDidMount() {
 ```
 After state receives the JSON body, it can be used to render dropdown options on the page. In the following code, a map function is called on the JSON body slice of state, converting them into option tags. Because componentDidMount is only called after the page renders, it is possible to get an error on this mapping. To prevent this, an initial value of an empty array is set for the target slice of state to ensure the map function can still run. After the componentDidMount function runs and state is updated, there is a re-render which properly displays the new selections. 
 
-The handleInput function dynamically updates state according to the content inside the user's input.  
+The handleInput function dynamically updates state according to the content inside the user's input. When the form is submitted, all of the input information inside of state is sent as an object as a argument alongside the axios POST request.
 
 ```
 <Dropdown value={this.state.occupation} onChange={this.handleInput('occupation')}>
