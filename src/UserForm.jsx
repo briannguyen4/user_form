@@ -42,10 +42,11 @@ const Input = styled.input`
     height: 32px;
     margin: 10px 0px;
     border: 1px solid lightgrey;
+    padding-left: 10px;
 `;
 
 const Dropdown = styled.select`
-    width: 60%;
+    width: 61%;
     height: 32px;
     margin: 10px 0px;
     
@@ -166,12 +167,13 @@ class UserForm extends React.Component {
                 <FormContainer> 
                 <Form onSubmit={this.handleSubmit}>
                         <FormTitle>Create a New Account</FormTitle>
-                        <Input value={this.state.name} onChange={this.handleInput('name')}>
-                        </Input >
-                        <Input value={this.state.email} onChange={this.handleInput('email')}>
-                        </Input>
-                        <Input value={this.state.password} onChange={this.handleInput('password')}>
-                        </Input>
+
+                        <Input value={this.state.name} onChange={this.handleInput('name')} placeholder="Name"/>
+    
+                        <Input value={this.state.email} onChange={this.handleInput('email')} placeholder="Email"/>
+                    
+                        <Input value={this.state.password} onChange={this.handleInput('password')} placeholder="Password"/>
+                        
                         <Dropdown value={this.state.occupation} onChange={this.handleInput('occupation')}>
                             <option hidden>Occupation</option>
                             {this.state.selections.occupations.map((value) => (
@@ -180,6 +182,7 @@ class UserForm extends React.Component {
                                 </option>
                             ))}
                         </Dropdown>
+
                         <Dropdown value={this.state.state} onChange={this.handleInput('state')}>
                             <option hidden>State</option>
                             {this.state.selections.states.map((value) => (
@@ -188,8 +191,10 @@ class UserForm extends React.Component {
                                 </option>
                             ))}
                         </Dropdown>
+
                         { this.state.failed && this.renderErrors() }
                         { this.state.success && this.renderSuccess() }
+
                         <Button>Create Account</Button>
                 </Form>
                 </FormContainer> 
