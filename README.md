@@ -2,6 +2,8 @@
 
 This is a web application for a user registration form created with the following technologies: [React.js](https://reactjs.org/docs/getting-started.html), [styled-components](https://styled-components.com/docs/basics), and [Axios](https://axios-http.com/docs/intro).
 
+![alt text](https://github.com/briannguyen4/user_form/blob/main/public/image.png)
+
 ## Features
 
 * A user form allowing users to submit their information with a HTTP POST request made to an external URL. If any of the fields weren't filled out, the application will render an error message. If all of the inputs were properly supplied, a success message will appear.
